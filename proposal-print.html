@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM &amp; 업무 자동화 구축 제안서 (인쇄용) — 원클릭사이트제작</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c50:#eff6ff;--c100:#dbeafe;--c200:#bfdbfe;--c300:#93c5fd;--c400:#60a5fa;
+    --c500:#3b82f6;--c600:#2563eb;--c700:#1d4ed8;--c800:#1e3a5f;--c900:#172554;--c950:#0f1729;
+    --em400:#34d399;--em500:#10b981;--em600:#059669;
+    --light-bg:#f8fafc;--dark:#0f172a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{font-family:'Noto Sans KR',sans-serif;background:#fff;color:#1a1a1a;}
+
+  .page{
+    width:297mm;height:210mm;padding:0;
+    position:relative;overflow:hidden;
+    page-break-after:always;break-after:page;
+  }
+  .page:last-child{page-break-after:auto;break-after:auto;}
+
+  @media screen{
+    body{background:#e5e7eb;padding:20px 0;}
+    .page{margin:20px auto;box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:4px;}
+    .print-hint{text-align:center;padding:16px;color:#6b7280;font-size:14px;max-width:297mm;margin:0 auto 8px;}
+    .print-hint a{color:var(--em600);text-decoration:underline;cursor:pointer;}
+  }
+  @media print{
+    body{background:#fff;padding:0;margin:0;}
+    .page{margin:0;box-shadow:none;border-radius:0;width:100%;height:100vh;}
+    .print-hint{display:none;}
+    @page{size:A4 landscape;margin:0;}
+  }
+
+  .page-inner{width:100%;height:100%;display:flex;flex-direction:column;position:relative;}
+  .section-pill{display:inline-block;padding:4px 14px;border-radius:99px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+  .heading-line{display:inline-block;position:relative;}
+  .heading-line::after{content:'';position:absolute;left:0;bottom:-3px;height:2.5px;width:100%;background:linear-gradient(90deg,var(--em500),var(--c400));border-radius:2px;}
+  .footer-bar{position:absolute;bottom:0;left:0;right:0;height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;font-size:9px;color:rgba(255,255,255,.5);}
+  .footer-bar.light{color:#9ca3af;}
+  .tbl{width:100%;border-collapse:collapse;font-size:11px;}
+  .tbl th{padding:6px 10px;text-align:left;font-weight:600;}
+  .tbl td{padding:5px 10px;vertical-align:top;}
+</style>
+</head>
+<body>
+
+<div class="print-hint">
+  <a onclick="window.print()">Ctrl+P (또는 Cmd+P)로 인쇄하세요</a> &middot; A4 가로 &middot; 여백 없음 &middot; 배경 그래픽 켜기
+</div>
+
+<!-- PAGE 1: Title -->
+<div class="page">
+  <div class="page-inner" style="background:linear-gradient(145deg,var(--c950) 0%,#0f2922 40%,var(--c900) 100%);justify-content:center;align-items:center;text-align:center;">
+    <div style="font-size:56px;margin-bottom:16px;filter:drop-shadow(0 0 20px rgba(16,185,129,0.4))">&#x2699;&#xFE0F;</div>
+    <div class="section-pill" style="background:rgba(16,185,129,.15);color:var(--em400);border:1px solid rgba(16,185,129,.3);margin-bottom:20px;">
+      PROJECT PROPOSAL &middot; 2026.04
+    </div>
+    <h1 style="font-size:36px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-1px;margin-bottom:10px;">
+      해외 화장품 인증 대행사<br><span style="color:var(--em400)">CRM &amp; 업무 자동화 구축</span>
+    </h1>
+    <p style="font-size:14px;color:var(--c300);letter-spacing:1px;margin-bottom:24px;">
+      수작업 업무 최소화 &middot; 견적/인보이스/리마인드 자동화 &middot; 프로세스 표준화
+    </p>
+    <div style="width:180px;height:1px;background:linear-gradient(90deg,transparent,var(--em500),transparent);margin-bottom:24px;"></div>
+    <div style="display:flex;gap:48px;margin-top:8px;">
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">400만원</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">제안 금액</div></div>
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">20일</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">개발기간</div></div>
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">3개월</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">무상 보수</div></div>
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">Notion + Zapier</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">핵심 스택</div></div>
+    </div>
+    <div class="footer-bar"><span>&copy; 2026 원클릭사이트제작</span><span>CRM &amp; 업무 자동화 전문팀</span></div>
+  </div>
+</div>
+
+<!-- PAGE 2: 프로젝트 이해 -->
+<div class="page">
+  <div class="page-inner" style="background:var(--light-bg);padding:36px 40px 28px;">
+    <div class="section-pill" style="background:rgba(16,185,129,.1);color:var(--em600);border:1px solid rgba(16,185,129,.3);margin-bottom:20px;">
+      SECTION 1 &middot; 프로젝트 이해
+    </div>
+    <h2 style="font-size:28px;font-weight:900;color:var(--c800);margin-bottom:24px;">
+      <span class="heading-line">해외 화장품 인증 대행사의 현재 문제</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="background:#fff;border:1.5px solid var(--c200);border-radius:14px;padding:20px;">
+        <div style="font-size:24px;margin-bottom:8px;">&#x1F4CB;</div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--c800);margin-bottom:6px;">수작업 과부하</h3>
+        <p style="font-size:11px;color:#374151;line-height:1.6;">견적서 작성, 인보이스 발행, 고객 리마인드 등 반복 업무를 수동으로 처리하여 업무 과중과 실수 가능성이 높습니다.</p>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--c200);border-radius:14px;padding:20px;">
+        <div style="font-size:24px;margin-bottom:8px;">&#x26A0;&#xFE0F;</div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--c800);margin-bottom:6px;">업무 누락 위험</h3>
+        <p style="font-size:11px;color:#374151;line-height:1.6;">인증 진행 상태 추적이 체계적이지 않아 중요한 일정이나 고객 응대가 누락될 수 있습니다.</p>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--c200);border-radius:14px;padding:20px;">
+        <div style="font-size:24px;margin-bottom:8px;">&#x1F4B0;</div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--c800);margin-bottom:6px;">재무 정산 비효율</h3>
+        <p style="font-size:11px;color:#374151;line-height:1.6;">인보이스와 정산을 수동 관리하면서 정산 누락, 미수금 관리 어려움 등 재무 리스크가 존재합니다.</p>
+      </div>
+      <div style="background:var(--c800);border:1.5px solid var(--c900);border-radius:14px;padding:20px;">
+        <div style="font-size:24px;margin-bottom:8px;">&#x1F3AF;</div>
+        <h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:6px;">CRM &amp; 자동화로 해결</h3>
+        <p style="font-size:11px;color:var(--c300);line-height:1.6;">CRM 시스템 도입과 업무 자동화를 통해 수작업을 최소화하고, 업무 프로세스를 표준화합니다.</p>
+      </div>
+    </div>
+    <div class="footer-bar light"><span>원클릭사이트제작</span><span>2 / 8</span></div>
+  </div>
+</div>
+
+<!-- PAGE 3: 프로젝트 목표 -->
+<div class="page">
+  <div class="page-inner" style="background:linear-gradient(135deg,var(--c950) 0%,#0f2922 100%);padding:36px 40px 28px;">
+    <div class="section-pill" style="background:rgba(16,185,129,.15);color:var(--em400);border:1px solid rgba(16,185,129,.3);margin-bottom:20px;">
+      SECTION 1 &middot; 프로젝트 이해
+    </div>
+    <h2 style="font-size:28px;font-weight:900;color:#fff;margin-bottom:24px;">
+      <span class="heading-line">프로젝트 목표</span>
+    </h2>
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:700px;">
+      <div style="display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--em500);color:var(--c950);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">1</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">업무 과중 &amp; 수작업 최소화</h3><p style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5;">반복적인 견적서 작성, 인보이스 발행, 리마인드 발송을 자동화하여 핵심 업무 집중도를 높입니다.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--em500);color:var(--c950);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">2</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">업무 누락 방지 &amp; 재무 정산 효율화</h3><p style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5;">CRM 파이프라인으로 진행 상태를 실시간 추적, 인보이스-정산 연동으로 미수금을 자동 관리합니다.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--em500);color:var(--c950);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">3</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">업무 프로세스 표준화 &amp; 자동화</h3><p style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5;">전체 플로우를 분석하고 표준화된 워크플로우로 재설계, 누구나 동일한 품질로 업무를 수행합니다.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);border-radius:12px;padding:16px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--em500);color:var(--c950);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">4</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">직원 매뉴얼 &amp; 교육</h3><p style="font-size:11px;color:rgba(255,255,255,.65);line-height:1.5;">시스템 도입 후 직원들이 즉시 활용할 수 있도록 실무 매뉴얼을 작성하고 교육 세션을 진행합니다.</p></div>
+      </div>
+    </div>
+    <div class="footer-bar"><span>원클릭사이트제작</span><span>3 / 8</span></div>
+  </div>
+</div>
+
+<!-- PAGE 4: 개발 범위 -->
+<div class="page">
+  <div class="page-inner" style="background:var(--light-bg);padding:36px 40px 28px;">
+    <div class="section-pill" style="background:rgba(16,185,129,.1);color:var(--em600);border:1px solid rgba(16,185,129,.3);margin-bottom:20px;">
+      SECTION 2 &middot; 개발 범위
+    </div>
+    <h2 style="font-size:28px;font-weight:900;color:var(--c800);margin-bottom:24px;">
+      <span class="heading-line">개발 범위</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="background:#fff;border:1.5px solid var(--c200);border-radius:14px;padding:20px;">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+          <span style="font-size:20px;">&#x1F465;</span>
+          <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;background:rgba(16,185,129,.15);color:var(--em600);">CRM 핵심</span>
+        </div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--c800);margin-bottom:8px;">CRM 시스템 구축</h3>
+        <ul style="font-size:11px;color:#374151;line-height:1.8;list-style:none;">
+          <li>&middot; CRM 플랫폼 선정 &amp; 세팅</li>
+          <li>&middot; 고객 파이프라인 설계 (리드 &rarr; 계약 &rarr; 완료)</li>
+          <li>&middot; 고객 DB 관리 체계 구축</li>
+          <li>&middot; 고객별 인증 진행 상태 실시간 추적</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--c200);border-radius:14px;padding:20px;">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+          <span style="font-size:20px;">&#x26A1;</span>
+          <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;background:rgba(16,185,129,.15);color:var(--em600);">자동화</span>
+        </div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--c800);margin-bottom:8px;">견적/인보이스/리마인드 자동화</h3>
+        <ul style="font-size:11px;color:#374151;line-height:1.8;list-style:none;">
+          <li>&middot; 견적서 자동 생성 &amp; 발송</li>
+          <li>&middot; 인보이스 자동 발행 &amp; 관리</li>
+          <li>&middot; 자동 리마인드 발송 (이메일/메신저)</li>
+          <li>&middot; 미수금 자동 알림</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--c200);border-radius:14px;padding:20px;">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+          <span style="font-size:20px;">&#x1F504;</span>
+          <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;background:rgba(16,185,129,.15);color:var(--em600);">프로세스</span>
+        </div>
+        <h3 style="font-size:14px;font-weight:700;color:var(--c800);margin-bottom:8px;">업무 프로세스 자동화</h3>
+        <ul style="font-size:11px;color:#374151;line-height:1.8;list-style:none;">
+          <li>&middot; 현행 업무 프로세스 분석</li>
+          <li>&middot; 자동화 가능 영역 도출</li>
+          <li>&middot; Zapier 기반 워크플로우 구축</li>
+          <li>&middot; 외부 시스템 연동 (Slack 등)</li>
+        </ul>
+      </div>
+      <div style="background:var(--c800);border:1.5px solid var(--c900);border-radius:14px;padding:20px;">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+          <span style="font-size:20px;">&#x1F4D6;</span>
+          <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;background:rgba(16,185,129,.15);color:var(--em400);">교육</span>
+        </div>
+        <h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;">매뉴얼 &amp; 교육</h3>
+        <ul style="font-size:11px;color:var(--c300);line-height:1.8;list-style:none;">
+          <li>&middot; 직원 실무 매뉴얼 작성</li>
+          <li>&middot; 교육 세션 진행 (2회)</li>
+          <li>&middot; FAQ &amp; 트러블슈팅 가이드</li>
+          <li>&middot; 영상 가이드 제공</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar light"><span>원클릭사이트제작</span><span>4 / 8</span></div>
+  </div>
+</div>
+
+<!-- PAGE 5: 시스템 아키텍처 -->
+<div class="page">
+  <div class="page-inner" style="background:linear-gradient(135deg,var(--c950) 0%,#0f2922 100%);padding:36px 40px 28px;">
+    <div class="section-pill" style="background:rgba(16,185,129,.15);color:var(--em400);border:1px solid rgba(16,185,129,.3);margin-bottom:20px;">
+      SECTION 2 &middot; 개발 범위
+    </div>
+    <h2 style="font-size:28px;font-weight:900;color:#fff;margin-bottom:24px;">
+      <span class="heading-line">시스템 아키텍처</span>
+    </h2>
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:860px;">
+      <div style="font-size:10px;font-weight:700;color:var(--em400);">CRM &amp; 데이터 허브</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+        <div style="border-radius:10px;padding:14px;text-align:center;background:rgba(255,255,255,.08);border:2px solid var(--em500);">
+          <div style="font-size:13px;font-weight:700;color:#fff;">Notion CRM</div>
+          <div style="font-size:10px;color:var(--c300);margin-top:3px;">고객 DB &middot; 파이프라인</div>
+        </div>
+        <div style="border-radius:10px;padding:14px;text-align:center;background:rgba(255,255,255,.08);border:2px solid var(--em500);">
+          <div style="font-size:13px;font-weight:700;color:#fff;">고객 DB</div>
+          <div style="font-size:10px;color:var(--c300);margin-top:3px;">연락처 &middot; 계약 &middot; 이력</div>
+        </div>
+        <div style="border-radius:10px;padding:14px;text-align:center;background:rgba(255,255,255,.08);border:2px solid var(--em500);">
+          <div style="font-size:13px;font-weight:700;color:#fff;">견적/인보이스</div>
+          <div style="font-size:10px;color:var(--c300);margin-top:3px;">자동 생성 &middot; 템플릿</div>
+        </div>
+      </div>
+      <div style="text-align:center;font-size:14px;color:var(--em400);">&darr; Zapier 자동화 엔진 &darr;</div>
+      <div style="font-size:10px;font-weight:700;color:var(--em400);">자동화 워크플로우</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+        <div style="border-radius:10px;padding:14px;text-align:center;background:rgba(16,185,129,.12);border:2px solid rgba(16,185,129,.3);">
+          <div style="font-size:13px;font-weight:700;color:#fff;">견적 자동화</div>
+          <div style="font-size:10px;color:var(--c300);margin-top:3px;">고객 등록 &rarr; 견적 생성</div>
+        </div>
+        <div style="border-radius:10px;padding:14px;text-align:center;background:rgba(16,185,129,.12);border:2px solid rgba(16,185,129,.3);">
+          <div style="font-size:13px;font-weight:700;color:#fff;">리마인드 자동화</div>
+          <div style="font-size:10px;color:var(--c300);margin-top:3px;">일정 기반 자동 알림</div>
+        </div>
+        <div style="border-radius:10px;padding:14px;text-align:center;background:rgba(16,185,129,.12);border:2px solid rgba(16,185,129,.3);">
+          <div style="font-size:13px;font-weight:700;color:#fff;">정산 자동화</div>
+          <div style="font-size:10px;color:var(--c300);margin-top:3px;">인보이스 &rarr; 미수금 추적</div>
+        </div>
+      </div>
+      <div style="text-align:center;font-size:14px;color:var(--em400);">&darr;</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <div style="font-size:10px;font-weight:700;color:var(--em400);margin-bottom:6px;">알림 채널</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="border-radius:99px;padding:4px 12px;font-size:10px;font-weight:600;background:rgba(16,185,129,.15);color:var(--em400);">이메일</span>
+            <span style="border-radius:99px;padding:4px 12px;font-size:10px;font-weight:600;background:rgba(16,185,129,.15);color:var(--em400);">Slack</span>
+            <span style="border-radius:99px;padding:4px 12px;font-size:10px;font-weight:600;background:rgba(16,185,129,.15);color:var(--em400);">카카오톡</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;color:var(--em400);margin-bottom:6px;">외부 연동</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="border-radius:99px;padding:4px 12px;font-size:10px;font-weight:600;background:rgba(16,185,129,.15);color:var(--em400);">Google Sheets</span>
+            <span style="border-radius:99px;padding:4px 12px;font-size:10px;font-weight:600;background:rgba(16,185,129,.15);color:var(--em400);">Google Calendar</span>
+            <span style="border-radius:99px;padding:4px 12px;font-size:10px;font-weight:600;background:rgba(16,185,129,.15);color:var(--em400);">Node.js API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar"><span>원클릭사이트제작</span><span>5 / 8</span></div>
+  </div>
+</div>
+
+<!-- PAGE 6: 기술 스택 + 일정 -->
+<div class="page">
+  <div class="page-inner" style="background:var(--light-bg);padding:36px 40px 28px;">
+    <div class="section-pill" style="background:rgba(16,185,129,.1);color:var(--em600);border:1px solid rgba(16,185,129,.3);margin-bottom:20px;">
+      SECTION 3 &middot; 기술 제안
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div>
+        <h2 style="font-size:22px;font-weight:900;color:var(--c800);margin-bottom:16px;">
+          <span class="heading-line">기술 스택</span>
+        </h2>
+        <div style="border-radius:14px;overflow:hidden;border:1.5px solid var(--c200);">
+          <table class="tbl" style="background:#fff;">
+            <thead><tr style="background:var(--c800);"><th style="color:#fff;">구분</th><th style="color:#fff;">기술</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--em600);font-weight:600;">CRM</td><td>Notion Database + API</td></tr>
+              <tr style="background:var(--c50);"><td style="color:var(--em600);font-weight:600;">자동화</td><td>Zapier (Multi-step Zaps)</td></tr>
+              <tr><td style="color:var(--em600);font-weight:600;">Backend</td><td>Node.js (Express.js)</td></tr>
+              <tr style="background:var(--c50);"><td style="color:var(--em600);font-weight:600;">Database</td><td>Notion DB + Google Sheets</td></tr>
+              <tr><td style="color:var(--em600);font-weight:600;">알림</td><td>Slack + Email (SMTP)</td></tr>
+              <tr style="background:var(--c50);"><td style="color:var(--em600);font-weight:600;">일정</td><td>Google Calendar API</td></tr>
+              <tr><td style="color:var(--em600);font-weight:600;">문서</td><td>Google Docs / Notion</td></tr>
+              <tr style="background:var(--c50);"><td style="color:var(--em600);font-weight:600;">PM</td><td>Slack + Notion</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-size:22px;font-weight:900;color:var(--c800);margin-bottom:16px;">
+          <span class="heading-line">개발 일정 (20일)</span>
+        </h2>
+        <div style="border-radius:14px;overflow:hidden;border:1.5px solid var(--c200);margin-bottom:16px;">
+          <table class="tbl" style="background:#fff;">
+            <thead><tr style="background:var(--c800);"><th style="color:#fff;">단계</th><th style="color:#fff;">기간</th><th style="color:#fff;">내용</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--em600);font-weight:600;">1. 분석·설계</td><td>Day 1~3</td><td>업무 분석, CRM 설계</td></tr>
+              <tr style="background:var(--c50);"><td style="color:var(--em600);font-weight:600;">2. CRM 구축</td><td>Day 4~8</td><td>Notion CRM, 파이프라인</td></tr>
+              <tr><td style="color:var(--em600);font-weight:600;">3. 자동화</td><td>Day 7~13</td><td>Zapier, 견적/인보이스</td></tr>
+              <tr style="background:var(--c50);"><td style="color:var(--em600);font-weight:600;">4. 연동·테스트</td><td>Day 14~17</td><td>외부 시스템, 통합 테스트</td></tr>
+              <tr><td style="color:var(--em600);font-weight:600;">5. 교육</td><td>Day 18~20</td><td>매뉴얼, 교육 2회</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <div style="border-radius:10px;padding:8px 14px;background:#fff;border:1.5px solid var(--c200);font-size:11px;">
+            <strong style="color:var(--c800);">시작</strong> <span style="color:#6b7280;">2026.04.06</span>
+          </div>
+          <div style="border-radius:10px;padding:8px 14px;background:#fff;border:1.5px solid var(--c200);font-size:11px;">
+            <strong style="color:var(--c800);">완료</strong> <span style="color:#6b7280;">2026.04.25</span>
+          </div>
+          <div style="border-radius:10px;padding:8px 14px;background:rgba(16,185,129,.08);border:1.5px solid rgba(16,185,129,.25);font-size:11px;">
+            <strong style="color:var(--em600);">하자보수</strong> <span style="color:#6b7280;">3개월</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar light"><span>원클릭사이트제작</span><span>6 / 8</span></div>
+  </div>
+</div>
+
+<!-- PAGE 7: 팀 + 포트폴리오 -->
+<div class="page">
+  <div class="page-inner" style="background:linear-gradient(135deg,var(--c950) 0%,#0f2922 100%);padding:36px 40px 28px;">
+    <div class="section-pill" style="background:rgba(16,185,129,.15);color:var(--em400);border:1px solid rgba(16,185,129,.3);margin-bottom:20px;">
+      SECTION 4 &middot; 팀 &amp; 포트폴리오
+    </div>
+    <h2 style="font-size:24px;font-weight:900;color:#fff;margin-bottom:16px;">
+      <span class="heading-line">프로젝트 전담 팀</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;">
+      <div style="border-radius:14px;padding:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--em500);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;margin-bottom:8px;">J</div>
+        <h3 style="font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;">Jamie</h3>
+        <p style="font-size:10px;font-weight:600;color:var(--em400);margin-bottom:8px;">프로젝트 리드 / Product Engineer</p>
+        <div style="font-size:10px;color:rgba(255,255,255,.65);line-height:1.6;">
+          <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.1);"><strong style="color:var(--em400);">Clobe AI</strong> &mdash; 세무 ERP 구축</div>
+          <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.1);"><strong>올웨이즈</strong> &mdash; MAU 310만 0&rarr;1</div>
+          <div><strong>머니워크</strong> &mdash; 130만 유저 글로벌</div>
+        </div>
+      </div>
+      <div style="border-radius:14px;padding:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--em500);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;margin-bottom:8px;">T</div>
+        <h3 style="font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;">Tom</h3>
+        <p style="font-size:10px;font-weight:600;color:var(--em400);margin-bottom:8px;">시스템 아키텍트 / Lead Engineer</p>
+        <div style="font-size:10px;color:rgba(255,255,255,.65);line-height:1.6;">
+          <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.1);"><strong style="color:var(--em400);">前 쿠팡</strong> &mdash; EM, 15년+</div>
+          <div><strong>대규모 시스템</strong> &mdash; 아키텍처 설계</div>
+        </div>
+      </div>
+      <div style="border-radius:14px;padding:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--em500);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;margin-bottom:8px;">G</div>
+        <h3 style="font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;">Grace</h3>
+        <p style="font-size:10px;font-weight:600;color:var(--em400);margin-bottom:8px;">PM / 업무 프로세스 설계</p>
+        <div style="font-size:10px;color:rgba(255,255,255,.65);line-height:1.6;">
+          <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.1);"><strong>CRM</strong> &mdash; 다수 기업 구축</div>
+          <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.1);"><strong>프로세스</strong> &mdash; 분석 &amp; 자동화</div>
+          <div><strong>교육</strong> &mdash; 매뉴얼 &amp; 세션</div>
+        </div>
+      </div>
+    </div>
+    <h2 style="font-size:20px;font-weight:900;color:#fff;margin-bottom:4px;">핵심 포트폴리오</h2>
+    <p style="font-size:12px;font-weight:600;color:var(--em400);margin-bottom:12px;">CRM &middot; ERP &middot; 업무 자동화 실전 경험</p>
+    <div style="border-radius:14px;padding:14px;display:flex;align-items:center;gap:14px;background:rgba(16,185,129,.12);border:1.5px solid rgba(16,185,129,.3);margin-bottom:10px;">
+      <div style="width:40px;height:40px;border-radius:50%;background:var(--em500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">&#x1F4CA;</div>
+      <div><h3 style="font-size:13px;font-weight:700;color:#fff;">Clobe AI &mdash; 세무 ERP 시스템 구축</h3><p style="font-size:10px;color:var(--c300);">고객 관리 CRM, 업무 자동화, 정산 시스템 직접 설계 &amp; 구축. <strong style="color:var(--em400);">ERP &amp; CRM 실전 경험</strong></p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div style="border-radius:14px;padding:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);">
+        <h3 style="font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;">올웨이즈 (Alwayz)</h3>
+        <p style="font-size:10px;color:var(--em400);margin-bottom:6px;">MAU 310만 &middot; GMV 530억</p>
+        <p style="font-size:10px;color:rgba(255,255,255,.65);line-height:1.5;">대규모 커머스 0&rarr;1 풀스택 구현, Node.js 백엔드, 대규모 DB 운영</p>
+      </div>
+      <div style="border-radius:14px;padding:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);">
+        <h3 style="font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;">머니워크 (MoneyWalk)</h3>
+        <p style="font-size:10px;color:var(--em400);margin-bottom:6px;">KR/JP/US 글로벌 130만 유저</p>
+        <p style="font-size:10px;color:rgba(255,255,255,.65);line-height:1.5;">헬스케어 리워드 앱, 3개국 동시 운영, 참여율 +30%</p>
+      </div>
+    </div>
+    <div class="footer-bar"><span>원클릭사이트제작</span><span>7 / 8</span></div>
+  </div>
+</div>
+
+<!-- PAGE 8: 마무리 -->
+<div class="page">
+  <div class="page-inner" style="background:linear-gradient(145deg,var(--c950) 0%,#0f2922 55%,var(--c900) 100%);justify-content:center;align-items:center;text-align:center;">
+    <div class="section-pill" style="background:rgba(16,185,129,.15);color:var(--em400);border:1px solid rgba(16,185,129,.3);margin-bottom:28px;">
+      CLOSING
+    </div>
+    <h1 style="font-size:36px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-1px;margin-bottom:16px;">
+      업무 효율화의 시작,<br>함께 만들어가겠습니다
+    </h1>
+    <div style="width:180px;height:1px;background:linear-gradient(90deg,transparent,var(--em500),transparent);margin:0 auto 20px;"></div>
+    <p style="font-size:16px;font-weight:300;color:rgba(255,255,255,.75);max-width:500px;line-height:1.7;margin-bottom:32px;">
+      수작업에서 벗어나<br>체계적인 CRM &amp; 업무 자동화로의 전환을<br>원클릭사이트제작이 함께합니다.
+    </p>
+    <div style="display:flex;gap:48px;">
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">400만원</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">제안 금액</div></div>
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">20일</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">개발기간</div></div>
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">3개월</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">무상 보수</div></div>
+      <div style="text-align:center;"><div style="font-size:22px;font-weight:900;color:var(--em400)">Notion + Zapier</div><div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">핵심 스택</div></div>
+    </div>
+    <div class="footer-bar"><span>&copy; 2026 원클릭사이트제작</span><span>8 / 8</span></div>
+  </div>
+</div>
+
+</body>
+</html>
